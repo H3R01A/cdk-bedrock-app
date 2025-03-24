@@ -25,7 +25,7 @@ export const handler = async (event: any): Promise<any> => {
      * This adjusting of the prompt is called "Prompt Engineering"
      * https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
      */
-    const prompt = `You are an expert Kubernetes cluster analyst. 
+    const promptOld = `You are an expert Kubernetes cluster analyst. 
     Your task is to analyze and summarize the provided Kubernetes cluster metrics data.
     
     Here's the data:
@@ -64,6 +64,13 @@ export const handler = async (event: any): Promise<any> => {
        - Comment on the timestamp of the data and its relevance
     
     Please provide your analysis in a clear, structured format using markdown for better readability.`;
+
+
+    const prompt = `You are an expert in financial services and providing personal finance advice. 
+    Your task is to analyze and summarize information and make it easy for people to understand.
+    
+    Here is some information. Please make it easier to understand using Pokemon analogies:
+    ${JSON.stringify(requestBody.inputData, null, 2)}`;
 
     /**
      * NOTE: Different models expect different parameteres for the InvokeModelCommand
