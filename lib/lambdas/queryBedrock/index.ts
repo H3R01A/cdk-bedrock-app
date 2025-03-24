@@ -69,7 +69,7 @@ export const handler = async (event: any): Promise<any> => {
     const prompt = `You are an expert in financial services and providing personal finance advice. 
     Your task is to analyze and summarize information and make it easy for people to understand.
     
-    Here is some information. Please make it easier to understand using Pokemon analogies:
+    Here is some information. Please make it easier to understand using Pokemon and Digimon analogies:
     ${JSON.stringify(requestBody.inputData, null, 2)}`;
 
     /**
