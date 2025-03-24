@@ -66,7 +66,7 @@ export const handler = async (event: any): Promise<any> => {
     Please provide your analysis in a clear, structured format using markdown for better readability.`;
 
 
-    const prompt = `You are an expert in financial services and providing personal finance advice. 
+    const prompt = `You are an expert in financial services and providing personal finance advice to everyone. 
     Your task is to analyze and summarize information and make it easy for people to understand.
     
     Here is some information. Please make it easier to understand using Pokemon and Digimon analogies:
